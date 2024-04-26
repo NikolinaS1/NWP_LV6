@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1.title Edit Project
+  a(href='/', class='custom-button') Back
+
+  form(method='POST', action=`/edit-project/${project._id}`, class='form-container') 
+    div
+      label(for='name') Name:<br/>
+      input(type='text', id='name', name='name', value=project.name, required)
+
+    div
+      label(for='description') Description:<br/>
+      input(type='text', id='description', name='description', value=project.description, required)
+
+    div
+      label(for='price') Price:<br/>
+      input(type='number', id='price', name='price', value=project.price, required)
+
+    div
+      label(for='completed_jobs') Completed Jobs:<br/>
+      input(type='text', id='completed_jobs', name='completed_jobs', value=project.completed_jobs, required)
+
+    div
+      label(for='start_date') Start Date:<br/>
+      input(type='date', id='start_date', name='start_date', value=start_date, required)
+
+    div
+      label(for='end_date') End Date:<br/>
+      input(type='date', id='end_date', name='end_date', value=end_date, required)
+
+    div
+      button(type='submit', class='custom-button') Update Project

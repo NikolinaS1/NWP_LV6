@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.title Add project member
+  a(href='/', class='custom-button') Back
+  .form-container
+    form(method='POST', action=`/add-team-member/${project._id}`)
+      input(type='text', name='user', placeholder='Enter project member:', required, class='form-input')
+      button(type='submit', class='custom-button') Add

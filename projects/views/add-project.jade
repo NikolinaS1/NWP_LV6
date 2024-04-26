@@ -1,0 +1,33 @@
+extends layout
+
+block content
+  h1.title Add Project
+  a(href='/', class='custom-button') Back
+
+  form(method='POST', action='/add-project', class='form-container') 
+    div
+      label(for='name') Name:</label><br />
+      input(type='text', id='name', name='name', required)
+
+    div
+      label(for='description') Description:</label><br />
+      input(type='text', id='description', name='description', required)
+
+    div
+      label(for='price') Price:</label><br />
+      input(type='number', id='price', name='price', required)
+
+    div
+      label(for='completed_jobs') Completed Jobs:</label><br />
+      input(type='text', id='completed_jobs', name='completed_jobs', required)
+
+    div
+      label(for='start_date') Start Date:</label><br />
+      input(type='date', id='start_date', name='start_date', required)
+
+    div
+      label(for='end_date') End Date:</label><br />
+      input(type='date', id='end_date', name='end_date', required)
+
+    div
+      button(type='submit', class='custom-button') Add Project
